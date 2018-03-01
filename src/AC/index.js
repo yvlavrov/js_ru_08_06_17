@@ -1,8 +1,4 @@
-import {
-    DELETE_ARTICLE,
-    INCREMENT,
-    SELECT_ARTICLE,
-    SELECT_ARTICLE_DATE} from '../constants'
+import {DELETE_ARTICLE, INCREMENT, CHANGE_SELECTION, CHANGE_DATE_RANGE} from '../constants'
 
 export function increment() {
     return {
@@ -17,18 +13,16 @@ export function deleteArticle(id) {
     }
 }
 
-export function selectArticle(ids) {
+export function changeDateRange(dateRange) {
     return {
-        type: SELECT_ARTICLE,
-        payload: { ids }
+        type: CHANGE_DATE_RANGE,
+        payload: { dateRange }
     }
 }
 
-export function selectArticleDate(date) {
+export function changeSelection(selected) {
     return {
-        type: SELECT_ARTICLE_DATE,
-        payload: { date }
+        type: CHANGE_SELECTION,
+        payload: { selected }
     }
 }
-
-
